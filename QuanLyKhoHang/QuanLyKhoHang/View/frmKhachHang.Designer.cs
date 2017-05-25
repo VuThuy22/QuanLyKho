@@ -90,7 +90,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvKhachHang);
-            this.groupBox2.Location = new System.Drawing.Point(33, 252);
+            this.groupBox2.Location = new System.Drawing.Point(34, 256);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -267,7 +267,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(33, 23);
+            this.groupBox1.Location = new System.Drawing.Point(34, 27);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -280,7 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 490);
+            this.ClientSize = new System.Drawing.Size(874, 492);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmKhachHang";
