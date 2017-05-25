@@ -1,20 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace QuanLyKhoHang.Model
+namespace QuanLyKho11.Model
 {
-    public partial class HangHoaObj : Form
+    class HangHoaObj
     {
-        public HangHoaObj()
+        public string MaHang { get; set; }
+        public string TenHang { get; set; }
+        public string DonViTinh { get; set; }
+        public string Ton { get; set; }
+
+        public HangHoaObj() { }
+        public HangHoaObj(string MaHang, string TenHang, string DonViTinh, string Ton)
         {
-            InitializeComponent();
+            this.MaHang = MaHang;
+            this.TenHang = TenHang;
+            this.DonViTinh = DonViTinh;
+            this.Ton = Ton;
         }
     }
 }

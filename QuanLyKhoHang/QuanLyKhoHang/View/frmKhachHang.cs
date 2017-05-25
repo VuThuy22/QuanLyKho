@@ -10,7 +10,6 @@ using System.Windows.Forms;
 using QuanLyKho11.Controller;
 using QuanLyKho11.Model;
 
-
 namespace QuanLyKhoHang.View
 {
     public partial class frmKhachHang : Form
@@ -65,7 +64,6 @@ namespace QuanLyKhoHang.View
             kh1obj.DiaChi = txtDiaChi.Text.ToString().Trim();
             kh1obj.SDT = txtSDT.Text.ToString().Trim();
         }
-
         private void btnThem_Click(object sender, EventArgs e)
         {
             flag = 0;
@@ -133,6 +131,7 @@ namespace QuanLyKhoHang.View
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+
             frmKhachHang_Load(sender, e);
             dis_en(false);
         }
