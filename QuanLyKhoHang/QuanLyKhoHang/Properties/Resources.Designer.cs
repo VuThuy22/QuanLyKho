@@ -63,6 +63,16 @@ namespace QuanLyKhoHang.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nhu_cau_nha_xuong_cong_nghiep_hien_nay {
+            get {
+                object obj = ResourceManager.GetObject("nhu-cau-nha-xuong-cong-nghiep-hien-nay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vvp1395453076 {
             get {
                 object obj = ResourceManager.GetObject("vvp1395453076", resourceCulture);
