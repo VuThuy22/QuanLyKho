@@ -65,9 +65,6 @@
     <Compile Include="Model\ChiTietPhieuXuatObj.cs" />
     <Compile Include="Model\ConnectToSql.cs" />
     <Compile Include="Model\HangHoaObj.cs" />
-    <Compile Include="Model\HangHoaObj.Designer.cs">
-      <DependentUpon>HangHoaObj.cs</DependentUpon>
-    </Compile>
     <Compile Include="Model\KhachHangObj.cs" />
     <Compile Include="Model\KhoObj.cs" />
     <Compile Include="Model\NhaCungCapObj.cs" />
