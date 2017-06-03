@@ -5,9 +5,9 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using QuanLyKho11.Model;
+using QuanLyKhoHang.Model;
 
-namespace QuanLyKho11.Controller
+namespace QuanLyKhoHang.Controller
 {
     class HangHoaCtl
     {

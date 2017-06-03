@@ -7,8 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyKho11.Controller;
-using QuanLyKho11.Model;
+using QuanLyKhoHang.Controller;
+using QuanLyKhoHang.Model;
 
 namespace QuanLyKhoHang.View
 {
