@@ -168,7 +168,36 @@ namespace QuanLyKhoHang.View
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-           
+            GanDuLieu(pnobj);
+            if (flag == 0)   // thêm
+            {
+                if (pnctl.AddPhieuXuat(pnobj))
+                {
+                    GanDuLieu1(ctobj);
+                    if (ctctl.AddChiTietPhieuXuat(ctobj))
+                        MessageBox.Show("Thêm hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    else
+                        MessageBox.Show("Thêm chi tiết không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else            // sửa
+            {
+                if (pnctl.UpdatePhieuXuat(pnobj))
+                {
+                    MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            frmPhieuXuat_Load(sender, e);
+
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -180,7 +209,20 @@ namespace QuanLyKhoHang.View
 
         private void btnThemHang_Click(object sender, EventArgs e)
         {
-           
+            flag = 0;
+            Load_cmbMaHang();
+            txtDonGia.Clear();
+            txtSLThuc.Clear();
+            txtThanhTien.Clear();
+            txtDonGia.Enabled = true;
+            txtSLThuc.Enabled = true;
+            txtThanhTien.Enabled = true;
+            cbbMaHang.Enabled = true;
+            btnLuuCT.Enabled = true;
+            btnSuaCT.Enabled = false;
+            btnXoaCT.Enabled = false;
+            btnThem.Enabled = false;
+            btnSua.Enabled = false;
         }
 
         private void btnSuaCT_Click(object sender, EventArgs e)
@@ -197,7 +239,34 @@ namespace QuanLyKhoHang.View
 
         private void btnLuuCT_Click(object sender, EventArgs e)
         {
-            
+            GanDuLieu1(ctobj);
+            if (flag == 0)   // thêm
+            {
+                if (ctctl.AddChiTietPhieuXuat(ctobj))
+                {
+                    MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else        
+            {
+                if (flag == 1)
+                {
+                    if (ctctl.UpdateChiTietPhieuXuat(ctobj))
+                    {
+                        MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+
+            }
+            frmPhieuXuat_Load(sender, e);
         }
 
         private void btnXoaCT_Click(object sender, EventArgs e)
