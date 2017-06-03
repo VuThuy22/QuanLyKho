@@ -14,12 +14,12 @@ namespace QuanLyKhoHang.Model
         public string DiaChi { get; set; }
 
         public KhachHangObj() { }
-        public KhachHangObj(string MaKH, string TenKH, string SDT, string DiaChi)
+        public KhachHangObj(string maKH, string tenKH, string SDT, string diaChi)
         {
-            this.MaKH = MaKH;
-            this.TenKH = TenKH;
+            this.MaKH = maKH;
+            this.TenKH = tenKH;
             this.SDT = SDT;
-            this.DiaChi = DiaChi;
+            this.DiaChi = diaChi;
         }
     }
 }

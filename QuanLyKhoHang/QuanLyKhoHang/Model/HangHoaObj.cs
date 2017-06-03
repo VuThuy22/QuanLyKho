@@ -14,12 +14,12 @@ namespace QuanLyKhoHang.Model
         public string Ton { get; set; }
 
         public HangHoaObj() { }
-        public HangHoaObj(string MaHang, string TenHang, string DonViTinh, string Ton)
+        public HangHoaObj(string maHang, string tenHang, string donViTinh, string ton)
         {
-            this.MaHang = MaHang;
-            this.TenHang = TenHang;
-            this.DonViTinh = DonViTinh;
-            this.Ton = Ton;
+            this.MaHang = maHang;
+            this.TenHang = tenHang;
+            this.DonViTinh = donViTinh;
+            this.Ton = ton;
         }
     }
 }
