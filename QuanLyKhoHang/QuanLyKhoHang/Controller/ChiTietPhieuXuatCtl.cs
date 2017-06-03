@@ -18,7 +18,6 @@ namespace QuanLyKhoHang.Controller
         {
             DataTable dt = new DataTable();
             cmd.CommandText = "select ct.MaPX,hh.MaHang,ct.DonGia,ct.SLThuc,ct.ThanhTien from ChiTietPhieuXuat ct,HangHoa hh where ct.MaHang = hh.MaHang and MaPX='" + ma + "'";
-            //cmd.CommandText = "select ct.MaPX,hh.TenHang,ct.DonGia,ct.SLThuc from ChiTietPhieuXuat ct,HangHoa hh where ct.MaMang = hh.MaMang and MaPX='" + ma + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try
