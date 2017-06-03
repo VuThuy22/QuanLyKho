@@ -14,10 +14,6 @@ namespace QuanLyKhoHang.Controller
         ConnectToSql con = new ConnectToSql();
         SqlCommand cmd = new SqlCommand();
 
-        /// <summary>
-        /// Hàm lấy dữ liệu . Trả về 1 data table
-        /// </summary>
-        /// <returns></returns>
         public DataTable GetData()
         {
             DataTable dt = new DataTable();
@@ -113,7 +109,6 @@ namespace QuanLyKhoHang.Controller
             }
             return true;
         }
-
 
     }
 }
