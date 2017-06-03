@@ -70,6 +70,7 @@ namespace QuanLyKhoHang.View
 
 
         }
+        // hàm load giữ liệu
         private void Binding1()
         {
 
@@ -82,6 +83,7 @@ namespace QuanLyKhoHang.View
             txtThanhTien.DataBindings.Clear();
             txtThanhTien.DataBindings.Add("Text", dgvChiTiet.DataSource, "ThanhTien");
         }
+        // Hàm gán dữ liệu 
         private void GanDuLieu1(ChiTietPhieuXuatObj ctobj)
         {
             ctobj.MaPX1 = txtMaPX.Text.ToString().Trim();
@@ -90,6 +92,7 @@ namespace QuanLyKhoHang.View
             ctobj.SLThuc1 = txtSLThuc.Text.ToString().Trim();
             ctobj.ThanhTien1 = txtThanhTien.Text.ToString().Trim();
         }
+        // hàm bôi đen các ô
         public void dis_en(bool e)
         {
             txtMaPX.Enabled = e;
@@ -104,8 +107,6 @@ namespace QuanLyKhoHang.View
             btnLuuCT.Enabled = e;
             btnSuaCT.Enabled = !e;
             btnXoaCT.Enabled = !e;
-
-
         }
         private void Clear()
         {
@@ -130,8 +131,12 @@ namespace QuanLyKhoHang.View
             Load_cmbMaHang();
             Load_cbbMaKho();
             Load_cbbMaKH();
-        }
 
+
+
+
+        }
+        // nhán vào buttom sửa
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 1;
