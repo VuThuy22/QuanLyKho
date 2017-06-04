@@ -36,3 +36,4 @@ D:\ThucTapNhom2222\QuanLyKho\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang
 D:\ThucTapNhom2222\QuanLyKho\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.csproj.GenerateResource.Cache
 D:\ThucTapNhom2222\QuanLyKho\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.exe
 D:\ThucTapNhom2222\QuanLyKho\QuanLyKhoHang\QuanLyKhoHang\bin\Debug\QuanLyKhoHang.pdb
+D:\ThucTapNhom2222\QuanLyKho\QuanLyKhoHang\QuanLyKhoHang\obj\Debug\QuanLyKhoHang.View.frmHuongDan.resources

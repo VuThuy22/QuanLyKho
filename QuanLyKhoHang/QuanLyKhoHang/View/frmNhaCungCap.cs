@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyKhoHang.Controller;
 using QuanLyKhoHang.Model;
+using QuanLyKhoHang.View;
 
 namespace QuanLyKho11.View
 {
@@ -152,6 +153,13 @@ namespace QuanLyKho11.View
         {
             frmNhaCungCap_Load(sender, e);
             dis_en(false);
+        }
+
+        private void btnTroLai_Click(object sender, EventArgs e)
+        {
+            frmMain ds = new frmMain();
+            this.Hide();
+            ds.Show();
         }
     }
 }

@@ -288,27 +288,8 @@ namespace QuanLyKhoHang.View
             }
             PhieuNhap1_Load(sender, e);
         }
-        private void txtMaPN_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                DataTable dt = new System.Data.DataTable();
-                dt = ctctl.GetData(txtMaPN.Text.Trim());
-                dgvChiTiet.DataSource = dt;
-
-
-            }
-            catch
-            {
-                dgvChiTiet.DataSource = null;
-            }
-            Binding1();
-        }
-
-        private void txtThanhTien_MouseClick(object sender, MouseEventArgs e)
-        {
-            txtThanhTien.Text = (Int32.Parse(txtDonGia.Text) * Int32.Parse(txtSLThuc.Text)).ToString();
-        }
+        
+      
 
         private void button5_Click_1(object sender, EventArgs e)
         {
@@ -328,6 +309,36 @@ namespace QuanLyKhoHang.View
             btnXoaCT.Enabled = false;
             btnThem.Enabled = false;
             btnSua.Enabled = false;
+        }
+
+        private void txtMaPN_TextChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable dt = new System.Data.DataTable();
+                dt = ctctl.GetData(txtMaPN.Text.Trim());
+                dgvChiTiet.DataSource = dt;
+
+
+            }
+            catch
+            {
+                dgvChiTiet.DataSource = null;
+            }
+            Binding1();
+        }
+
+        private void txtThanhTien_MouseClick_1(object sender, MouseEventArgs e)
+        {
+            txtThanhTien.Text = (Int32.Parse(txtDonGia.Text) * Int32.Parse(txtSLThuc.Text)).ToString();
+        }
+
+        private void btnTroLai_Click(object sender, EventArgs e)
+        {
+
+            frmMain ds = new frmMain();
+            this.Hide();
+            ds.Show();
         }
     }
 }

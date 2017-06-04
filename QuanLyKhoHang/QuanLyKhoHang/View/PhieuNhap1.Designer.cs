@@ -36,6 +36,7 @@
             this.btnSuaCT = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -63,15 +64,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnTroLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvChiTiet
@@ -107,7 +108,7 @@
             // btnLuuCT
             // 
             this.btnLuuCT.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLuuCT.Location = new System.Drawing.Point(572, 237);
+            this.btnLuuCT.Location = new System.Drawing.Point(523, 237);
             this.btnLuuCT.Name = "btnLuuCT";
             this.btnLuuCT.Size = new System.Drawing.Size(88, 49);
             this.btnLuuCT.TabIndex = 80;
@@ -129,7 +130,7 @@
             // btnSuaCT
             // 
             this.btnSuaCT.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnSuaCT.Location = new System.Drawing.Point(244, 237);
+            this.btnSuaCT.Location = new System.Drawing.Point(225, 237);
             this.btnSuaCT.Name = "btnSuaCT";
             this.btnSuaCT.Size = new System.Drawing.Size(94, 49);
             this.btnSuaCT.TabIndex = 78;
@@ -151,6 +152,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnTroLai);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.txtThuKho);
             this.groupBox1.Controls.Add(this.label9);
@@ -172,6 +174,17 @@
             this.groupBox1.TabIndex = 76;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::QuanLyKhoHang.Properties.Resources.nhu_cau_nha_xuong_cong_nghiep_hien_nay;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox2.Location = new System.Drawing.Point(545, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(224, 178);
+            this.pictureBox2.TabIndex = 94;
+            this.pictureBox2.TabStop = false;
             // 
             // label9
             // 
@@ -219,6 +232,7 @@
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(278, 26);
             this.txtThanhTien.TabIndex = 88;
+            this.txtThanhTien.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtThanhTien_MouseClick_1);
             // 
             // txtSLThuc
             // 
@@ -412,6 +426,7 @@
             this.txtMaPN.Name = "txtMaPN";
             this.txtMaPN.Size = new System.Drawing.Size(190, 26);
             this.txtMaPN.TabIndex = 41;
+            this.txtMaPN.TextChanged += new System.EventHandler(this.txtMaPN_TextChanged_1);
             // 
             // label4
             // 
@@ -449,21 +464,22 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "Mã Phiếu Nhập";
             // 
-            // pictureBox2
+            // btnTroLai
             // 
-            this.pictureBox2.BackgroundImage = global::QuanLyKhoHang.Properties.Resources.nhu_cau_nha_xuong_cong_nghiep_hien_nay;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Location = new System.Drawing.Point(545, 22);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(224, 178);
-            this.pictureBox2.TabIndex = 94;
-            this.pictureBox2.TabStop = false;
+            this.btnTroLai.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnTroLai.Location = new System.Drawing.Point(673, 237);
+            this.btnTroLai.Name = "btnTroLai";
+            this.btnTroLai.Size = new System.Drawing.Size(96, 49);
+            this.btnTroLai.TabIndex = 95;
+            this.btnTroLai.Text = "Trở lại";
+            this.btnTroLai.UseVisualStyleBackColor = false;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // PhieuNhap1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1692, 695);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -477,12 +493,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -525,5 +541,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnTroLai;
     }
 }
