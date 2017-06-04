@@ -11,7 +11,6 @@ namespace QuanLyKhoHang.Model
         public string MaPX { get; set; }
         public DateTime NgayXuat { get; set; }
         public string MaKH { get; set; }
-        public string TongTien { get; set; }
         public string MaKho { get; set; }
 
         public PhieuXuatObj() { }
@@ -20,7 +19,6 @@ namespace QuanLyKhoHang.Model
             this.MaPX = MaPX;
             this.NgayXuat = NgayXuat;
             this.MaKH = MaKH;
-            this.TongTien = TongTien;
             this.MaKho = MaKho;
         }
     }

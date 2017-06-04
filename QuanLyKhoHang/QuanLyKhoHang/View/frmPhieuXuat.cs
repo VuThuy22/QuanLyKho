@@ -14,11 +14,9 @@ namespace QuanLyKhoHang.View
 {
     public partial class frmPhieuXuat : Form
     {
-        //public SendMessage send;
         public frmPhieuXuat()
         {
             InitializeComponent();
-           // this.send = sender;
         }
         PhieuXuatCtl pnctl = new PhieuXuatCtl();
         PhieuXuatObj pnobj = new PhieuXuatObj();
@@ -32,32 +30,7 @@ namespace QuanLyKhoHang.View
             dt = pnctl.GetData();
             dgvPhieuXuat.DataSource = dt;
             Binding();
-            // Binding1();
             dis_en(false);
-
-            /////////////
-            float tt = 0;
-            if (dgvPhieuXuat.RowCount > 1)
-            {
-
-                for (int i = 0; i < dgvPhieuXuat.RowCount - 1; i++)
-                {
-
-                    if (dgvChiTiet.RowCount > 1)
-                    {
-                        for (int j = 0; j < dgvChiTiet.RowCount - 1; j++)
-                        {
-                            tt = tt + float.Parse(dgvChiTiet.Rows[j].Cells["ThanhTien"].Value.ToString());
-                        }
-                        txtTongTien.Text = tt.ToString();
-                    }
-                    else txtTongTien.Text = tt.ToString();
-                }
-
-
-            }
-            else txtTongTien.Text = tt.ToString();
-
         }
         public void Load_cbbMaKH()
         {
@@ -94,11 +67,10 @@ namespace QuanLyKhoHang.View
             cbbMaKho.DataBindings.Add("Text", dgvPhieuXuat.DataSource, "MaKho");
             cbbMaKH.DataBindings.Clear();
             cbbMaKH.DataBindings.Add("Text", dgvPhieuXuat.DataSource, "MaKH");
-            txtTongTien.DataBindings.Clear();
-            txtTongTien.DataBindings.Add("Text", dgvPhieuXuat.DataSource, "TongTien");
 
 
         }
+        // hàm load giữ liệu
         private void Binding1()
         {
 
@@ -111,6 +83,7 @@ namespace QuanLyKhoHang.View
             txtThanhTien.DataBindings.Clear();
             txtThanhTien.DataBindings.Add("Text", dgvChiTiet.DataSource, "ThanhTien");
         }
+        // Hàm gán dữ liệu 
         private void GanDuLieu1(ChiTietPhieuXuatObj ctobj)
         {
             ctobj.MaPX1 = txtMaPX.Text.ToString().Trim();
@@ -119,10 +92,10 @@ namespace QuanLyKhoHang.View
             ctobj.SLThuc1 = txtSLThuc.Text.ToString().Trim();
             ctobj.ThanhTien1 = txtThanhTien.Text.ToString().Trim();
         }
+        // hàm bôi đen các ô
         public void dis_en(bool e)
         {
             txtMaPX.Enabled = e;
-            txtTongTien.Enabled = e;
             cbbMaKho.Enabled = e;
             cbbMaKH.Enabled = e;
             dtpNgayXuat.Enabled = e;
@@ -134,14 +107,10 @@ namespace QuanLyKhoHang.View
             btnLuuCT.Enabled = e;
             btnSuaCT.Enabled = !e;
             btnXoaCT.Enabled = !e;
-
-
         }
         private void Clear()
         {
             txtMaPX.Clear();
-            txtTongTien.Clear();
-            txtTongTien.Clear();
             txtDonGia.Clear();
             txtSLThuc.Clear();
             txtThanhTien.Clear();
@@ -152,7 +121,6 @@ namespace QuanLyKhoHang.View
             pnobj.MaKho = cbbMaKho.Text.ToString().Trim();
             pnobj.MaKH = cbbMaKH.Text.ToString().Trim();
             pnobj.NgayXuat = dtpNgayXuat.Value;
-            pnobj.TongTien = txtTongTien.Text.ToString().Trim();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -163,8 +131,12 @@ namespace QuanLyKhoHang.View
             Load_cmbMaHang();
             Load_cbbMaKho();
             Load_cbbMaKH();
-        }
 
+
+
+
+        }
+        // nhán vào buttom sửa
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 1;
@@ -211,8 +183,7 @@ namespace QuanLyKhoHang.View
                         MessageBox.Show("Thêm hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     else
                         MessageBox.Show("Thêm chi tiết không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    // MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmPhieuXuat_Load(sender, e);
+                   
                 }
                 else
                 {
@@ -224,13 +195,14 @@ namespace QuanLyKhoHang.View
                 if (pnctl.UpdatePhieuXuat(pnobj))
                 {
                     MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    // frmPhieuXuat_Load(sender, e);
                 }
                 else
                 {
                     MessageBox.Show("Sửa không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            frmPhieuXuat_Load(sender, e);
+
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -247,11 +219,9 @@ namespace QuanLyKhoHang.View
             txtDonGia.Clear();
             txtSLThuc.Clear();
             txtThanhTien.Clear();
-            txtTongTien.Clear();
             txtDonGia.Enabled = true;
             txtSLThuc.Enabled = true;
             txtThanhTien.Enabled = true;
-            txtTongTien.Enabled = true;
             cbbMaHang.Enabled = true;
             btnLuuCT.Enabled = true;
             btnSuaCT.Enabled = false;
@@ -267,7 +237,6 @@ namespace QuanLyKhoHang.View
             txtDonGia.Enabled = true;
             txtSLThuc.Enabled = true;
             txtThanhTien.Enabled = true;
-            txtTongTien.Enabled = true;
             btnLuuCT.Enabled = true;
             btnSuaCT.Enabled = false;
             btnXoaCT.Enabled = false;
@@ -281,21 +250,19 @@ namespace QuanLyKhoHang.View
                 if (ctctl.AddChiTietPhieuXuat(ctobj))
                 {
                     MessageBox.Show("Thêm thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //  frmChiTietPhieuXuat_Load(sender, e);
                 }
                 else
                 {
                     MessageBox.Show("Thêm không thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else            // sửa
+            else        
             {
                 if (flag == 1)
                 {
                     if (ctctl.UpdateChiTietPhieuXuat(ctobj))
                     {
                         MessageBox.Show("Sửa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //frmChiTietPhieuXuat_Load(sender, e);
                     }
                     else
                     {
@@ -316,7 +283,6 @@ namespace QuanLyKhoHang.View
                     if (ctctl.DeleteChiTietPhieuXuat(cbbMaHang.Text.Trim()))
                     {
                         MessageBox.Show("Xóa thành công", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //ph(sender, e);
                     }
                     else
                     {

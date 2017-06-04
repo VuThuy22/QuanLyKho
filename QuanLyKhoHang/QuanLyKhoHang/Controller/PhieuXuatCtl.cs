@@ -38,7 +38,7 @@ namespace QuanLyKhoHang.Controller
 
         public bool AddPhieuXuat(PhieuXuatObj pxObj)
         {
-            cmd.CommandText = "Insert into PhieuXuat values ('" + pxObj.MaPX + "','" + pxObj.NgayXuat + "','" + pxObj.MaKH + "','" + pxObj.TongTien + "','" + pxObj.MaKho + "')";
+            cmd.CommandText = "Insert into PhieuXuat values ('" + pxObj.MaPX + "','" + pxObj.NgayXuat + "','" + pxObj.MaKH + "','" + pxObj.MaKho + "')";
 
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
@@ -81,7 +81,7 @@ namespace QuanLyKhoHang.Controller
         }
         public bool UpdatePhieuXuat(PhieuXuatObj pxObj)
         {
-            cmd.CommandText = " update PhieuXuat set MaPX='" + pxObj.MaPX + "',NgayXuat='" + pxObj.NgayXuat + "',MaKH='" + pxObj.MaKH + "',TongTien='" + pxObj.TongTien + "',MaKho='" + pxObj.MaKho + "' where MaPN='" + pxObj.MaPX + "'";
+            cmd.CommandText = " update PhieuXuat set MaPX='" + pxObj.MaPX + "',NgayXuat='" + pxObj.NgayXuat + "',MaKH='" + pxObj.MaKH + "',MaKho='" + pxObj.MaKho + "' where MaPN='" + pxObj.MaPX + "'";
             cmd.CommandType = CommandType.Text;
             cmd.Connection = con.strConn;
             try
