@@ -153,5 +153,13 @@ namespace QuanLyKhoHang.View
                 }
             }
         }
+
+        private void btnTroLai_Click(object sender, EventArgs e)
+        {
+
+            frmMain ds = new frmMain();
+            this.Hide();
+            ds.Show();
+        }
     }
 }
