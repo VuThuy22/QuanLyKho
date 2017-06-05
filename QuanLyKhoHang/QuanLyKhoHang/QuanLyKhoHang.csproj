@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Controller\ChiTietPhieuNhapCtl.cs" />
     <Compile Include="Controller\ChiTietPhieuXuatCtl.cs" />
+    <Compile Include="Controller\ChiTietVatTu.cs" />
     <Compile Include="Controller\HangHoaMod.cs" />
     <Compile Include="Controller\KhachHangCtl.cs" />
     <Compile Include="Controller\KhoCtl.cs" />
@@ -63,6 +64,7 @@
     </Compile>
     <Compile Include="Model\ChiTietPhieuNhapObj.cs" />
     <Compile Include="Model\ChiTietPhieuXuatObj.cs" />
+    <Compile Include="Model\ChiTietVatTuObj.cs" />
     <Compile Include="Model\ConnectToSql.cs" />
     <Compile Include="Model\HangHoaObj.cs" />
     <Compile Include="Model\KhachHangObj.cs" />
@@ -72,6 +74,12 @@
     <Compile Include="Model\PhieuXuatObj.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\frmChiTietVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmChiTietVatTu.Designer.cs">
+      <DependentUpon>frmChiTietVatTu.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmHangHoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +128,12 @@
     <Compile Include="View\frmPhieuXuat.Designer.cs">
       <DependentUpon>frmPhieuXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmThongTinSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmThongTinSanPham.Designer.cs">
+      <DependentUpon>frmThongTinSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PhieuNhap1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +150,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\frmChiTietVatTu.resx">
+      <DependentUpon>frmChiTietVatTu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmHangHoa.resx">
       <DependentUpon>frmHangHoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -159,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmPhieuXuat.resx">
       <DependentUpon>frmPhieuXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmThongTinSanPham.resx">
+      <DependentUpon>frmThongTinSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\PhieuNhap1.resx">
       <DependentUpon>PhieuNhap1.cs</DependentUpon>
