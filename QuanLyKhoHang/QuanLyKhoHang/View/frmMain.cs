@@ -64,5 +64,24 @@ namespace QuanLyKhoHang.View
             m.Show();
             this.Hide();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void hàngTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChiTietVatTu m = new frmChiTietVatTu();
+            m.Show();
+            this.Hide();
+        }
+
+        private void thôngTinSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThongTinSanPham m = new frmThongTinSanPham();
+            m.Show();
+            this.Hide();
+        }
     }
 }
